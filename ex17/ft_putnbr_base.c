@@ -16,7 +16,9 @@ int		ft_is_base_ok(char *base)
 		while (i <= base_size)
 		{
 			if ((base[cursor] == base[i]) || (base[i] == '-')
-				|| (base[i] == '+') || (base[0] == '-') || (base[0] == '+'))
+				|| (base[i] == '+') || (base[0] == '-') || (base[0] == '+')
+				|| (base[i] < 32) || (base[0] < 32) || (base[0] == 127)
+				|| (base[i] == 127))
 				return (0);
 			i++;
 		}
